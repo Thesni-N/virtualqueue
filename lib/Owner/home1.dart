@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/Owner/Opayment.dart';
 import 'package:login/Vbooking.dart';
 import 'package:login/login.dart';
 import 'package:login/volunteer/vlogin.dart';
@@ -99,7 +100,7 @@ class _homesState extends State<homes> {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Payment()));
 
                             },
                             child: Column(

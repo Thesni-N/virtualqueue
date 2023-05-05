@@ -62,6 +62,7 @@ class _nearbyState extends State<nearby> {
 
                                 SizedBox(width: 10,),
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
 
 

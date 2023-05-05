@@ -128,7 +128,10 @@ class _SignUpState extends State<SignUp> {
                         child: MaterialButton(
                           minWidth: double.infinity,
                           height:60,
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+
+                          },
                           color: Colors.blueAccent,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(29)
