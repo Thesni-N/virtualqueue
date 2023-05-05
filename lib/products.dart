@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:login/cart.dart';
 
 
 class cartitemsample extends StatefulWidget {
@@ -85,9 +86,10 @@ class _cartitemsampleState extends State<cartitemsample> {
                                             children:[
 
                                             ElevatedButton(onPressed: (){
+                                              Navigator.push(context, MaterialPageRoute(builder: (context)=>cart()));
 
 
-                                            }, child: Text("Add to Cart"))],
+                                            }, child: Text("Add"))],
 
                                         ),
 

@@ -67,7 +67,7 @@ class _homeState extends State<home> {
                             },
                             child: Column(
                               children: [
-                                new Image.asset('',
+                                new Image.asset('images/img_13.png',
                                   height: 90,
                                   width: 150,
                                   alignment: Alignment.center,
@@ -144,7 +144,7 @@ class _homeState extends State<home> {
                             child: Column(
                               children: [
 
-                                new Image.asset('',
+                                new Image.asset('images/img_18.png',
                                   height: 90,
                                   width: 150,
                                   alignment: Alignment.center,
