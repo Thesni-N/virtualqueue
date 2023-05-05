@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/Owner/home1.dart';
 import 'package:login/fogetpswrd.dart';
 import 'package:login/signup.dart';
 import 'package:login/volunteer/home.dart';
@@ -95,7 +96,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>Homescreen()));
                     }else if(passwordController.text==volunteer){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
-                    }else{
+                    }else if(passwordController.text==rationshopowner){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>homes()));
+
+                    }
+                    else{
                       print("error");
                     }
                   },

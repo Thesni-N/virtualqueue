@@ -3,14 +3,14 @@ import 'package:login/Vbooking.dart';
 import 'package:login/login.dart';
 import 'package:login/volunteer/vlogin.dart';
 import 'package:login/volunteer/vprofile.dart';
-class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
+class homes extends StatefulWidget {
+  const homes({Key? key}) : super(key: key);
 
   @override
-  State<home> createState() => _homeState();
+  State<homes> createState() => _homesState();
 }
 
-class _homeState extends State<home> {
+class _homesState extends State<homes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,13 +67,13 @@ class _homeState extends State<home> {
                             },
                             child: Column(
                               children: [
-                                new Image.asset('images/img_13.png',
+                                new Image.asset('',
                                   height: 100,
                                   width: 150,
                                   alignment: Alignment.center,
                                 ),
                                 SizedBox(height: 30,),
-                                Text('Orders',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                                Text('Booking',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
@@ -105,13 +105,13 @@ class _homeState extends State<home> {
                             child: Column(
                               children: [
 
-                                new Image.asset('images/img_19.png',
+                                new Image.asset('',
                                   height: 100,
                                   width: 120,
                                   alignment: Alignment.topCenter,fit: BoxFit.cover,
                                 ),
                                 SizedBox(height: 30,),
-                                Text('Profile',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                                Text('Payment',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
@@ -144,14 +144,14 @@ class _homeState extends State<home> {
                             child: Column(
                               children: [
 
-                                new Image.asset('images/img_18.png',
+                                new Image.asset('',
                                   height: 100,
                                   width: 150,
                                   alignment: Alignment.center,
                                 ),
                                 SizedBox(height: 30,),
 
-                                Text('Logout',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                                Text('Add User',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
