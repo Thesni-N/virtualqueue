@@ -87,7 +87,7 @@ class _cartitemsampleState extends State<cartitemsample> {
                                             ElevatedButton(onPressed: (){
 
 
-                                            }, child: Text("buy"))],
+                                            }, child: Text("Add to Cart"))],
 
                                         ),
 
@@ -117,10 +117,6 @@ class _cartitemsampleState extends State<cartitemsample> {
 
           ),
 
-          ElevatedButton(onPressed: (){
-
-
-          }, child: Text("place order"))
         ],
       ),
 
