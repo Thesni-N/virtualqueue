@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:login/login.dart';
 
-class SignUp extends StatefulWidget {
+class owner extends StatefulWidget {
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<owner> createState() => _ownerState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _ownerState extends State<owner> {
   @override
   String _selected='';
 
@@ -59,67 +59,16 @@ class _SignUpState extends State<SignUp> {
                           makeInput(label: "Password",obsureText: true),
                           makeInput(label: "Confirm Password",obsureText: true),
                           makeInput(label: "Place"),
-                          makeInput(label: " Ration Card Number",obsureText:true )
 
                         ],
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                            child:ListTile(
-                              leading: Radio<String>(
-                                value: 'APL',
-                                  groupValue: _selected,
-                                  onChanged: (value){
-                                  setState((){
-                            _selected=value!;
-                                    });
-
-                                  },
-
-                              ),
-                              title: Text('APL'),
-                            ), ),
-
-                        Expanded(
-                          child:ListTile(
-                            leading: Radio<String>(
-                              value: 'BPL',
-                              groupValue: _selected,
-                              onChanged: (value){
-                                setState((){
-                                  _selected=value!;
-                                });
-                              },
-
-                            ),
-                            title: Text('BBL'),
-                          ), ),
-                        Expanded(
-                          child:ListTile(
-                            leading: Radio<String>(
-                              value: 'AAY',
-                              groupValue: _selected,
-                              onChanged: (value){
-                                setState((){
-                                  _selected=value!;
-                                });
-
-                              },
-
-                            ),
-                            title: Text('AAY'),
-                          ), ),
-
-                      ],
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 40),
                       child: Container(
                         padding: EdgeInsets.only(top: 3,left: 3),
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
+                          borderRadius: BorderRadius.circular(40),
 
                         ),
 
@@ -180,7 +129,7 @@ Widget makeInput({label,obsureText = false}){
           contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.grey
+                color: Colors.grey
             ),
           ),
           border: OutlineInputBorder(

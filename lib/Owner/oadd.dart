@@ -4,18 +4,18 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:login/Owner/accept.dart';
 
-class Payment extends StatefulWidget {
-  const Payment({Key? key}) : super(key: key);
+class adduser extends StatefulWidget {
+  const adduser({Key? key}) : super(key: key);
 
   @override
-  State<Payment> createState() => _PaymentState();
+  State<adduser> createState() => _adduserState();
 }
 
-class _PaymentState extends State<Payment> {
+class _adduserState extends State<adduser> {
 
-  List name=["Ashraf","Sumesh","Anoop","priya"];
-  List date=["18-2-2020","21-2-2020","10-5-2021","10-5-2021"];
-  List amount=["200","100","50","100"];
+  List name=["Ashraf","Sumesh","Anoop",];
+  List place=["Malappuarm","Parappanangadi","Tirur",];
+  List rationid=["0612678095","0600012763","1247430178",];
 
 
   @override
@@ -25,7 +25,7 @@ class _PaymentState extends State<Payment> {
           toolbarHeight: 50,
           backgroundColor: Colors.blueAccent,
 
-          title: Text("Payment"),
+          title: Text("Add User"),
         ),
         body:
 
@@ -43,15 +43,15 @@ class _PaymentState extends State<Payment> {
                         children: [
                           Row(
                             children: [
-                              SizedBox(width: 10,),
+                              SizedBox(width: 5,),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
 
-                                    Text("Name:  "+name[index],style: TextStyle(fontSize: 20,),),
-                                    Text("Date:  "+date[index],style: TextStyle(fontSize: 18,),),
-                                    Text("Amount:  "+amount[index],style: TextStyle(fontSize: 18,)),
+                                    Text("Name: "+name[index],style: TextStyle(fontSize: 20,),),
+                                    Text("Place: "+place[index],style: TextStyle(fontSize: 18,),),
+                                    Text("Card No: "+rationid[index],style: TextStyle(fontSize: 18,)),
                                   ]
                               ),
 
@@ -64,9 +64,10 @@ class _PaymentState extends State<Payment> {
                           Row(
                             children: [
                               Column(
+
                                 children: [
                                   Container(
-                                    height: 70,
+                                    height: 45,
                                     width: 100,
                                     decoration: BoxDecoration(
 
@@ -75,7 +76,21 @@ class _PaymentState extends State<Payment> {
 
                                     child: Padding(padding:
                                     EdgeInsets.all(4.0),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children:[
 
+                                          ElevatedButton(onPressed: (){
+                                            //Navigator.push(context, MaterialPageRoute(builder: (context)=>accept()));
+
+
+                                          }, child: Text("Accept")),
+                                          ElevatedButton(onPressed: (){
+
+                                          }, child: Text("Reject"))
+                                        ],
+
+                                      ),
                                     ),
 
                                   ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login/Owner/home1.dart';
 import 'package:login/fogetpswrd.dart';
+import 'package:login/registration.dart';
 import 'package:login/signup.dart';
 import 'package:login/volunteer/home.dart';
 
@@ -117,7 +118,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUp()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>registration()));
                     //signup screen
                   },
                 )

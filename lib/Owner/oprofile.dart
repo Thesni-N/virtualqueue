@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:login/Homepage.dart';
+import 'package:login/Owner/home1.dart';
 import 'package:login/login.dart';
 import 'package:login/volunteer/home.dart';
 import 'package:login/welcome.dart';
 
-class profile extends StatefulWidget {
-  const profile({Key? key}) : super(key: key);
+class oprofile extends StatefulWidget {
+  const oprofile({Key? key}) : super(key: key);
 
   @override
-  State<profile> createState() => _profileState();
+  State<oprofile> createState() => _oprofileState();
 }
 
-class _profileState extends State<profile> {
+class _oprofileState extends State<oprofile> {
 
   bool isObscurePassword=true;
 
   int currentTab = 2;
   final List<Widget> screen =[
-    profile(),
+    oprofile(),
 
   ];
 
-  Widget currentScreen = profile();
+  Widget currentScreen = oprofile();
 
   TextEditingController unameController=TextEditingController();
   TextEditingController plcController=TextEditingController();
@@ -127,10 +128,10 @@ class _profileState extends State<profile> {
               ),
               SizedBox(height: 30,),
 
-              buildTextField("Full name", "Sarath", false),
-              buildTextField("Email", "sarath246@gmail.com", false),
-              buildTextField("Password", "7215094", true),
-              buildTextField("Place", "Malappuram", false),
+              buildTextField("Full name", "Anoop", false),
+              buildTextField("Email", "Anoop123@gmail.com", false),
+              buildTextField("Password", "2539014", true),
+              buildTextField("Place", "malappuram", false),
 
               SizedBox(height: 30,),
 
@@ -154,7 +155,7 @@ class _profileState extends State<profile> {
 
                   ElevatedButton(
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>homes()));
 
                     },
                     child: Text("Submit",style: TextStyle(fontSize: 15, letterSpacing: 2, color: Colors.white),),

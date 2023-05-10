@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:login/Owner/Obooking.dart';
 import 'package:login/Owner/Opayment.dart';
+import 'package:login/Owner/Osignup.dart';
 import 'package:login/Owner/oadd.dart';
 import 'package:login/Owner/oprofile.dart';
-import 'package:login/Vbooking.dart';
-import 'package:login/login.dart';
-import 'package:login/volunteer/vlogin.dart';
-import 'package:login/volunteer/vprofile.dart';
-class homes extends StatefulWidget {
-  const homes({Key? key}) : super(key: key);
+import 'package:login/signup.dart';
+import 'package:login/volunteer/vsignup.dart';
+
+class registration extends StatefulWidget {
+  const registration({Key? key}) : super(key: key);
 
   @override
-  State<homes> createState() => _homesState();
+  State<registration> createState() => _registrationState();
 }
 
-class _homesState extends State<homes> {
+class _registrationState extends State<registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _homesState extends State<homes> {
         toolbarHeight: 50,
         backgroundColor: Colors.blueAccent,
 
-        title: Text("Homepage"),
+        title: Text("Registration"),
       ),
 
       body: Container(
@@ -52,7 +52,7 @@ class _homesState extends State<homes> {
                       Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.lightGreen,
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
@@ -66,18 +66,14 @@ class _homesState extends State<homes> {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>bookings()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUp()));
 
                             },
                             child: Column(
                               children: [
-                                new Image.asset('images/img_22.png',
-                                  height: 120,
-                                  width: 110,
-                                  alignment: Alignment.center,
-                                ),
-                                SizedBox(height: 30,),
-                                Text('Booking',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+
+                                SizedBox(height: 65,),
+                                Text('user',textAlign: TextAlign.center,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
@@ -89,7 +85,7 @@ class _homesState extends State<homes> {
                       Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.blueGrey,
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
@@ -103,55 +99,15 @@ class _homesState extends State<homes> {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Payment()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>owner()));
 
                             },
                             child: Column(
                               children: [
 
-                                new Image.asset('images/img_21.png',
-                                  height: 120,
-                                  width: 120,
-                                  alignment: Alignment.topCenter,fit: BoxFit.cover,
-                                ),
-                                SizedBox(height: 30,),
-                                Text('Payment',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
 
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(0,17),
-                                  blurRadius: 17,
-                                  spreadRadius: -23
-                              )
-                            ]
-                        ),
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>oprofile()));
-
-                            },
-                            child: Column(
-                              children: [
-
-                                new Image.asset('images/img_23.png',
-                                  height: 120,
-                                  width: 120,
-                                  alignment: Alignment.topCenter,fit: BoxFit.cover,
-                                ),
-                                SizedBox(height: 30,),
-                                Text('Profile',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                                SizedBox(height: 65,),
+                                Text('Ration Shop Owner',textAlign: TextAlign.center,style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
@@ -163,10 +119,11 @@ class _homesState extends State<homes> {
 
 
 
+
                       Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Colors.yellowAccent,
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
@@ -180,19 +137,14 @@ class _homesState extends State<homes> {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>adduser()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>volunteer()));
                             },
                             child: Column(
                               children: [
 
-                                new Image.asset('images/img_20.png',
-                                  height: 120,
-                                  width: 150,
-                                  alignment: Alignment.center,
-                                ),
-                                SizedBox(height: 20,),
+                                SizedBox(height: 65,),
 
-                                Text('Add User',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                                Text('Volunteer',textAlign: TextAlign.center,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
