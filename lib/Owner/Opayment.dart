@@ -13,7 +13,7 @@ class Payment extends StatefulWidget {
 
 class _PaymentState extends State<Payment> {
 
-  List name=["Ashraf","Sumesh","Anoop","priya"];
+  List name=["Priya","Gopi","suresh","Anoop"];
   List date=["18-2-2020","21-2-2020","10-5-2021","10-5-2021"];
   List amount=["200","100","50","100"];
 

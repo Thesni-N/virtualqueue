@@ -128,8 +128,8 @@ class _oprofileState extends State<oprofile> {
               ),
               SizedBox(height: 30,),
 
-              buildTextField("Full name", "Anoop", false),
-              buildTextField("Email", "Anoop123@gmail.com", false),
+              buildTextField("Full name", "Ramesh", false),
+              buildTextField("Email", "Ramesh123@gmail.com", false),
               buildTextField("Password", "2539014", true),
               buildTextField("Place", "malappuram", false),
 

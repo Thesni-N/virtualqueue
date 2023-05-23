@@ -29,81 +29,56 @@ class _adduserState extends State<adduser> {
         ),
         body:
 
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: ListView.builder(
+        ListView.builder(
 
 
-              itemCount: name.length,
-              itemBuilder: (context, index) {
+            itemCount: name.length,
+            itemBuilder: (context, index) {
 
-                return Card(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(width: 5,),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
+              return Card(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(width: 5,),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 70),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
 
-                                    Text("Name: "+name[index],style: TextStyle(fontSize: 20,),),
-                                    Text("Place: "+place[index],style: TextStyle(fontSize: 18,),),
-                                    Text("Card No: "+rationid[index],style: TextStyle(fontSize: 18,)),
-                                  ]
-                              ),
-
-
-
-
-                            ],
+                                Text("Name: "+name[index],style: TextStyle(fontSize: 20,),),
+                                Text("Place: "+place[index],style: TextStyle(fontSize: 18,),),
+                                Text("Card No: "+rationid[index],style: TextStyle(fontSize: 18,)),
+                              ]
                           ),
+                        ),
+                        SizedBox(width: 10,),
 
-                          Row(
-                            children: [
-                              Column(
+                        Row(
+                          children: [
+                            Row(
+                              children:[
 
-                                children: [
-                                  Container(
-                                    height: 45,
-                                    width: 100,
-                                    decoration: BoxDecoration(
-
-                                        borderRadius: BorderRadius.circular(5)
-                                    ),
-
-                                    child: Padding(padding:
-                                    EdgeInsets.all(4.0),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children:[
-
-                                          ElevatedButton(onPressed: (){
-                                            //Navigator.push(context, MaterialPageRoute(builder: (context)=>accept()));
+                                ElevatedButton(onPressed: (){
+                                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>accept()));
 
 
-                                          }, child: Text("Accept")),
-                                          ElevatedButton(onPressed: (){
+                                }, child: Text("Accept")),
+                                SizedBox(width: 5,),
+                                ElevatedButton(onPressed: (){
 
-                                          }, child: Text("Reject"))
-                                        ],
+                                }, child: Text("Reject"))
+                              ],
 
-                                      ),
-                                    ),
+                            ),
+                          ],
 
-                                  ),
-                                ],
-                              ),
-                            ],
-
-                          )
-                        ]
-                    )
-                );
-              }
-          ),
+                        )
+                      ]
+                  )
+              );
+            }
         )
     );
   }

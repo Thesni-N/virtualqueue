@@ -16,7 +16,6 @@ class details extends StatefulWidget {
 class _detailsState extends State<details> {
   DateTime selectedDate = DateTime.now();
   bool isObscurePassword = true;
-
   int currentTab = 2;
   final List<Widget> screen = [
     details(),
@@ -26,6 +25,7 @@ class _detailsState extends State<details> {
   Widget currentScreen = details();
 
   TextEditingController nameController = TextEditingController();
+  TextEditingController _timecontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -142,20 +142,70 @@ class _detailsState extends State<details> {
         children:[
           Align(
               alignment: Alignment.centerLeft,
-              child: Text("Thesni")),
+              child: Text("Priya",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))),
           Row(
             children: [
-              Text("SUgar  :"),
+              Text("Sugar  :"),
               Text("2 kg")
             ],
           ),
           Row(
             children: [
-              Text("SUgar  :"),
+              Text("Rice  :"),
               Text("2 kg")
             ],
           ),
+          Row(
+            children: [
+              Text("Wheat  :"),
+              Text("4 pack")
+            ],
+          ),
+          SizedBox(height: 15,),
 
+          Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Gopi",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))),
+          Row(
+            children: [
+              Text("Rice  :"),
+              Text("3 kg")
+            ],
+          ),
+          Row(
+            children: [
+              Text("Sugar :"),
+              Text("2 kg")
+            ],
+          ),
+          Row(
+            children: [
+              Text("Kerosene  :"),
+              Text("2 ltr")
+            ],
+          ),
+          SizedBox(height: 15,),
+          Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Suresh",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))),
+          Row(
+            children: [
+              Text("Rice  :"),
+              Text("3 kg")
+            ],
+          ),
+          Row(
+            children: [
+              Text("Sugar :"),
+              Text("2 kg")
+            ],
+          ),
+          Row(
+            children: [
+              Text("Kerosene :"),
+              Text("2 ltr")
+            ],
+          ),
     SizedBox(height: 10),
     TextFormField(
     controller: _timecontroller,

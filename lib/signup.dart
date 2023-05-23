@@ -23,141 +23,127 @@ class _SignUpState extends State<SignUp> {
           Navigator.pop(context);
         },icon:Icon(Icons.arrow_back_ios,size: 20,color: Colors.black,)),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text ("Sign up", style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+            ),),
+            SizedBox(height: 20,),
+            Text("Create an Account,Its free",style: TextStyle(
+              fontSize: 15,
+              color: Colors.grey[700],
+            ),),
+            SizedBox(height: 30,),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                children: [
+                  makeInput(label: "Name"),
+                  makeInput(label: "DOB"),
+                  makeInput(label: "Email"),
+                  makeInput(label: "Phone Number"),
+                  makeInput(label: "Address"),
+                  makeInput(label: "Location"),
+                  makeInput(label: "Password",obsureText: true),
+                  makeInput(label: "Confirm Password",obsureText: true),
+
+                  makeInput(label: " Ration Card Number",obsureText:true )
+
+                ],
+              ),
+            ),
+            Row(
               children: [
-                Column(
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text ("Sign up", style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                        ),),
-                        SizedBox(height: 20,),
-                        Text("Create an Account,Its free",style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.grey[700],
-                        ),),
-                        SizedBox(height: 30,)
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 40
-                      ),
-                      child: Column(
-                        children: [
-                          makeInput(label: "User Name"),
-                          makeInput(label: "Email"),
-                          makeInput(label: "Password",obsureText: true),
-                          makeInput(label: "Confirm Password",obsureText: true),
-                          makeInput(label: "Place"),
-                          makeInput(label: " Ration Card Number",obsureText:true )
-
-                        ],
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                            child:ListTile(
-                              leading: Radio<String>(
-                                value: 'APL',
-                                  groupValue: _selected,
-                                  onChanged: (value){
-                                  setState((){
-                            _selected=value!;
-                                    });
-
-                                  },
-
-                              ),
-                              title: Text('APL'),
-                            ), ),
-
-                        Expanded(
-                          child:ListTile(
-                            leading: Radio<String>(
-                              value: 'BPL',
-                              groupValue: _selected,
-                              onChanged: (value){
-                                setState((){
-                                  _selected=value!;
-                                });
-                              },
-
-                            ),
-                            title: Text('BBL'),
-                          ), ),
-                        Expanded(
-                          child:ListTile(
-                            leading: Radio<String>(
-                              value: 'AAY',
-                              groupValue: _selected,
-                              onChanged: (value){
-                                setState((){
-                                  _selected=value!;
-                                });
-
-                              },
-
-                            ),
-                            title: Text('AAY'),
-                          ), ),
-
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
-                      child: Container(
-                        padding: EdgeInsets.only(top: 3,left: 3),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-
-                        ),
-
-                        child: MaterialButton(
-                          minWidth: double.infinity,
-                          height:60,
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                Expanded(
+                    child:ListTile(
+                      leading: Radio<String>(
+                        value: 'APL',
+                          groupValue: _selected,
+                          onChanged: (value){
+                          setState((){
+                    _selected=value!;
+                            });
 
                           },
-                          color: Colors.blueAccent,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(29)
-                          ),
-                          child: Text("Sign Up",style: TextStyle(
-                            fontWeight: FontWeight.w600,fontSize: 16,
 
-                          ),),
-                        ),
                       ),
+                      title: Text('APL'),
+                    ), ),
+
+                Expanded(
+                  child:ListTile(
+                    leading: Radio<String>(
+                      value: 'BPL',
+                      groupValue: _selected,
+                      onChanged: (value){
+                        setState((){
+                          _selected=value!;
+                        });
+                      },
+
                     ),
-                    SizedBox(height: 20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Already have an account? ",style: TextStyle(fontSize: 16),),
-                        TextButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                    title: Text('BBL'),
+                  ), ),
+                Expanded(
+                  child:ListTile(
+                    leading: Radio<String>(
+                      value: 'AAY',
+                      groupValue: _selected,
+                      onChanged: (value){
+                        setState((){
+                          _selected=value!;
+                        });
 
-                        }, child: Text("Login",style: TextStyle(fontSize: 20,color: Colors.blueAccent,fontWeight: FontWeight.w600, ),) ),
-                      ],
-                    )
-                  ],
+                      },
 
-                ),
+                    ),
+                    title: Text('AAY'),
+                  ), ),
+
               ],
             ),
-          ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              child: Container(
+                padding: EdgeInsets.only(top: 3,left: 3),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+
+                ),
+
+                child: MaterialButton(
+                  minWidth: double.infinity,
+                  height:60,
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+
+                  },
+                  color: Colors.blueAccent,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(29)
+                  ),
+                  child: Text("Sign Up",style: TextStyle(
+                    fontWeight: FontWeight.w600,fontSize: 16,
+
+                  ),),
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Already have an account? ",style: TextStyle(fontSize: 16),),
+                TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+
+                }, child: Text("Login",style: TextStyle(fontSize: 20,color: Colors.blueAccent,fontWeight: FontWeight.w600, ),) ),
+              ],
+            ),
+          ],
         ),
       ),
     );

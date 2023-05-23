@@ -24,6 +24,7 @@ import 'package:flutter/material.dart'
         TextStyle,
         Widget;
 import 'package:login/login.dart';
+import 'package:login/registration.dart';
 import 'package:login/signup.dart';
 
 class Home extends StatefulWidget {
@@ -79,7 +80,7 @@ class _HomeState extends State<Home> {
           ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => SignUp()));
+                    context, MaterialPageRoute(builder: (context) =>registration()));
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

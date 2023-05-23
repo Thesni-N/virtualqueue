@@ -82,75 +82,75 @@ class _registrationState extends State<registration> {
                       ),
 
 
-                      Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                            color: Colors.blueGrey,
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(0,17),
-                                  blurRadius: 17,
-                                  spreadRadius: -23
-                              )
-                            ]
-                        ),
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>owner()));
-
-                            },
-                            child: Column(
-                              children: [
-
-
-                                SizedBox(height: 65,),
-                                Text('Ration Shop Owner',textAlign: TextAlign.center,style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),)
-
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-
-
+                      // Container(
+                      //   padding: EdgeInsets.all(20),
+                      //   decoration: BoxDecoration(
+                      //       color: Colors.blueGrey,
+                      //       borderRadius: BorderRadius.circular(15),
+                      //       boxShadow: [
+                      //         BoxShadow(
+                      //             offset: Offset(0,17),
+                      //             blurRadius: 17,
+                      //             spreadRadius: -23
+                      //         )
+                      //       ]
+                      //   ),
+                      //   child: Material(
+                      //     color: Colors.transparent,
+                      //     child: InkWell(
+                      //       onTap: () {
+                      //         Navigator.push(context, MaterialPageRoute(builder: (context)=>owner()));
+                      //
+                      //       },
+                      //       child: Column(
+                      //         children: [
+                      //
+                      //
+                      //           SizedBox(height: 65,),
+                      //           Text('Ration Shop Owner',textAlign: TextAlign.center,style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),)
+                      //
+                      //         ],
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
 
 
 
 
-                      Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                            color: Colors.yellowAccent,
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(0,17),
-                                  blurRadius: 17,
-                                  spreadRadius: -23
-                              )
-                            ]
-                        ),
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>volunteer()));
-                            },
-                            child: Column(
-                              children: [
 
-                                SizedBox(height: 65,),
 
-                                Text('Volunteer',textAlign: TextAlign.center,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
-
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      // Container(
+                      //   padding: EdgeInsets.all(20),
+                      //   decoration: BoxDecoration(
+                      //       color: Colors.yellowAccent,
+                      //       borderRadius: BorderRadius.circular(15),
+                      //       boxShadow: [
+                      //         BoxShadow(
+                      //             offset: Offset(0,17),
+                      //             blurRadius: 17,
+                      //             spreadRadius: -23
+                      //         )
+                      //       ]
+                      //   ),
+                      //   child: Material(
+                      //     color: Colors.transparent,
+                      //     child: InkWell(
+                      //       onTap: () {
+                      //         Navigator.push(context, MaterialPageRoute(builder: (context)=>volunteer()));
+                      //       },
+                      //       child: Column(
+                      //         children: [
+                      //
+                      //           SizedBox(height: 65,),
+                      //
+                      //           Text('Volunteer',textAlign: TextAlign.center,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
+                      //
+                      //         ],
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ],

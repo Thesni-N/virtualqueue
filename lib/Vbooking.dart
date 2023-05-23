@@ -9,7 +9,7 @@ class Orders extends StatefulWidget {
 class _OrdersState extends State<Orders> {
 
   List name=["Priya","Gopi","Suresh",];
-  List address=["Narungalil(h) Tirur,Ozhur(po),Malappuram pincode:676303","Palakkal(h) Tirur,Tirur(po),Malappuram pincode:676307","Paatasherri(h) Parappanangadi,Neduva(po),Malappuram pincode:676306"];
+  List address=["Narungalil(h) Tirur","Palakkal(h) Tirur","Paatasherri(h) Calicut"];
   List amount=["60","70","50"];
   @override
   Widget build(BuildContext context) {
@@ -56,35 +56,21 @@ class _OrdersState extends State<Orders> {
 
                               ],
                             ),
+                            SizedBox(width: 10,),
+
                             Row(
                               children: [
-                                Column(
-                                  children: [
-                                    Container(
-                                      height: 35,
-                                      width: 100,
-                                      decoration: BoxDecoration(
+                                Row(
+                                  children:[
 
-                                          borderRadius: BorderRadius.circular(5)
-                                      ),
+                                    ElevatedButton(onPressed: (){
+                                      //Navigator.push(context, MaterialPageRoute(builder: (context)=>accept()));
 
-                                      child: Padding(padding:
-                                      EdgeInsets.all(4.0),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children:[
 
-                                              Text("Deliver")],
+                                    }, child: Text("Deliver")),
+                                                                     ],
 
-                                        ),
-
-                                      ),
-
-                                    ),
-                                  ],
                                 ),
-
-
                               ],
 
                             )
