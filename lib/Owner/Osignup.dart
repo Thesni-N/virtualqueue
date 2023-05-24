@@ -25,87 +25,75 @@ class _ownerState extends State<owner> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
-            width: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text ("Sign up", style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                        ),),
-                        SizedBox(height: 20,),
-                        Text("Create an Account,Its free",style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.grey[700],
-                        ),),
-                        SizedBox(height: 30,)
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 40
-                      ),
-                      child: Column(
-                        children: [
-                          makeInput(label: "User Name"),
-                          makeInput(label: "Email"),
-                          makeInput(label: "Password",obsureText: true),
-                          makeInput(label: "Confirm Password",obsureText: true),
-                          makeInput(label: "Place"),
-
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
-                      child: Container(
-                        padding: EdgeInsets.only(top: 3,left: 3),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(40),
-
-                        ),
-
-                        child: MaterialButton(
-                          minWidth: double.infinity,
-                          height:60,
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
-
-                          },
-                          color: Colors.blueAccent,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(29)
-                          ),
-                          child: Text("Sign Up",style: TextStyle(
-                            fontWeight: FontWeight.w600,fontSize: 16,
-
-                          ),),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Already have an account? ",style: TextStyle(fontSize: 16),),
-                        TextButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
-
-                        }, child: Text("Login",style: TextStyle(fontSize: 20,color: Colors.blueAccent,fontWeight: FontWeight.w600, ),) ),
-                      ],
-                    )
-                  ],
-
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text ("Sign up", style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),),
+              SizedBox(height: 20,),
+              Text("Create an Account,Its free",style: TextStyle(
+                fontSize: 15,
+                color: Colors.grey[700],
+              ),),
+              SizedBox(height: 30,),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 40
                 ),
-              ],
-            ),
+                child: Column(
+                  children: [
+                    makeInput(label: "ShopDealer_Name"),
+                    makeInput(label: "Email address"),
+                    makeInput(label: "Phone Number"),
+                    makeInput(label: "FPS ID"),
+                    makeInput(label: "Location"),
+                    makeInput(label: "Password",obsureText: true),
+
+
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                child: Container(
+                  padding: EdgeInsets.only(top: 3,left: 3),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+
+                  ),
+
+                  child: MaterialButton(
+                    minWidth: double.infinity,
+                    height:60,
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+
+                    },
+                    color: Colors.blueAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(29)
+                    ),
+                    child: Text("Sign Up",style: TextStyle(
+                      fontWeight: FontWeight.w600,fontSize: 16,
+
+                    ),),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already have an account? ",style: TextStyle(fontSize: 16),),
+                  TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+
+                  }, child: Text("Login",style: TextStyle(fontSize: 20,color: Colors.blueAccent,fontWeight: FontWeight.w600, ),) ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:login/Owner/Obooking.dart';
 import 'package:login/Owner/Opayment.dart';
 import 'package:login/Owner/oadd.dart';
 import 'package:login/Owner/oprofile.dart';
+import 'package:login/Owner/viewvolunteer.dart';
 import 'package:login/Vbooking.dart';
 import 'package:login/login.dart';
 import 'package:login/volunteer/vlogin.dart';
@@ -122,42 +123,7 @@ class _homesState extends State<homes> {
                           ),
                         ),
                       ),
-                      Container(
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(0,17),
-                                  blurRadius: 17,
-                                  spreadRadius: -23
-                              )
-                            ]
-                        ),
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>oprofile()));
 
-                            },
-                            child: Column(
-                              children: [
-
-                                new Image.asset('images/img_23.png',
-                                  height: 120,
-                                  width: 120,
-                                  alignment: Alignment.topCenter,fit: BoxFit.cover,
-                                ),
-                                SizedBox(height: 30,),
-                                Text('Profile',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
-
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
 
 
 
@@ -192,7 +158,79 @@ class _homesState extends State<homes> {
                                 ),
                                 SizedBox(height: 20,),
 
-                                Text('Add User',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                                Text('View User',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(0,17),
+                                  blurRadius: 17,
+                                  spreadRadius: -23
+                              )
+                            ]
+                        ),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>viewvolunteer()));
+
+                            },
+                            child: Column(
+                              children: [
+
+                                new Image.asset('',
+                                  height: 120,
+                                  width: 120,
+                                  alignment: Alignment.topCenter,fit: BoxFit.cover,
+                                ),
+                                SizedBox(height: 30,),
+                                Text('View Volunteer',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(0,17),
+                                  blurRadius: 17,
+                                  spreadRadius: -23
+                              )
+                            ]
+                        ),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>oprofile()));
+
+                            },
+                            child: Column(
+                              children: [
+
+                                new Image.asset('images/img_23.png',
+                                  height: 120,
+                                  width: 120,
+                                  alignment: Alignment.topCenter,fit: BoxFit.cover,
+                                ),
+                                SizedBox(height: 30,),
+                                Text('Profile',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
 
                               ],
                             ),
